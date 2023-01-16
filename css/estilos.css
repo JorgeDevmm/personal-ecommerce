@@ -1,7 +1,7 @@
 :root {
   --negro: #000000;
   --gris: #e1e1e1;
-  --primario: #037bc0;
+  --primario: #ffffec;
   --blanco: #fff;
   --celeste-pastel: #84b6f4;
   --verde-pastel: #77dd77;
@@ -13,6 +13,7 @@ html {
   box-sizing: border-box;
   background-color: var(--blanco);
   font-size: 62.5%; /* 1REM = 10px*/
+  background-color: var(--primario);
 }
 *,
 *:before,
@@ -21,7 +22,7 @@ html {
 }
 body {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 2;
 }
 
@@ -30,16 +31,16 @@ h1,
 h2,
 h3 {
   font-family: 'Playfair Display', serif;
-  margin: 0 0 5rem 0;
+  margin: 0 0 3rem 0;
 }
 h1 {
-  font-size: 5rem;
-}
-h2 {
   font-size: 4rem;
 }
-h3 {
+h2 {
   font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
 }
 a {
   text-decoration: none;
@@ -69,10 +70,13 @@ img {
 .text-center {
   text-align: center;
 }
+.color-celeste {
+  color: var(--celeste-pastel);
+}
 
 /* Header y Navegación */
 .nombre-sitio {
-  margin-top: 5rem;
+  margin-top: 3rem;
   text-align: center;
 }
 .nombre-sitio span {
@@ -86,6 +90,9 @@ img {
   display: flex;
   justify-content: space-around;
   font-weight: bold;
+}
+.nav-principal a {
+  color: var(--celeste-pastel);
 }
 .hero {
   background-image: url(../img/principal.jpg);
@@ -108,6 +115,7 @@ img {
   padding: 2rem;
   font-size: 2rem;
   font-weight: bold;
+  color: var(--celeste-pastel);
 }
 .categoria a:hover {
   background-color: var(--celeste-pastel);
@@ -191,7 +199,7 @@ img {
 }
 .producto:nth-child(4) img,
 .producto:nth-child(5) img {
-  height: 60rem;
+  height: 30rem;
   width: 100%;
   object-fit: cover;
 }
@@ -244,6 +252,7 @@ img {
 }
 .site-footer h3 {
   margin-bottom: 0.5rem;
+  color: var(--celeste-pastel);
 }
 .grid-footer {
   display: grid;
@@ -256,4 +265,22 @@ img {
 .copyright {
   margin-top: 5rem;
   text-align: center;
+}
+
+/**Nosotros**/
+.contenido-nosotros {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 2rem;
+}
+.contenido-nosotros .imagen img {
+  height: 43rem;
+  width: 100%;
+  object-fit: cover;
+}
+.informacion-nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
