@@ -13,7 +13,7 @@
     />
 
     <link rel="stylesheet" href="css/estilos.css" />
-    <title>Ecommerce - Blog</title>
+    <title>Ecommerce - Contacto</title>
   </head>
   <body>
     <div class="contenedor-navegacion">
@@ -31,75 +31,84 @@
     </div>
 
     <main class="contenido-principal contenedor">
-      <h2 class="text-center color-celeste">Nuestro Blog</h2>
+      <h2 class="text-center color-celeste">Contacto</h2>
 
-      <section class="contenedor-blog">
-        <div class="blog">
-          <article class="entrada">
-            <header>
-              <h2>Guía de Colores</h2>
-            </header>
+      <form class="formulario" action="">
+        <fieldset>
+          <legend>Tus datos</legend>
 
-            <div class="imagen">
-              <img src="img/nosotros.jpeg" alt="imagenn blog" />
-            </div>
+          <div class="campo">
+            <label for="nombre">Nombre: </label>
+            <input id="nombre" type="text" placeholder="Tu nombre" required />
+          </div>
 
-            <div class="entrada-meta">
-              <p>Fecha: <span>15 de enero de 2022</span></p>
-              <p>Escrita por: <span>Kusi kamay</span></p>
-            </div>
+          <div class="campo">
+            <label for="asunto">Asunto: </label>
+            <input id="asunto" type="text" placeholder="Tu Asunto" />
+          </div>
 
-            <div class="entrada-blog">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
-                in tempore assumenda ipsam repellendus amet rerum itaque tempora
-                molestias architecto ex cum dolores labore porro pariatur fugit,
-                consectetur perferendis similique.
-              </p>
-            </div>
+          <div class="campo">
+            <label for="email">Email: </label>
+            <input id="email" type="email" placeholder="Email" />
+          </div>
 
-            <a href="entrada.html" class="btn max-width-30">Leer</a>
-          </article>
-          <!--fin de article-->
-          <article class="entrada">
-            <header>
-              <h2>Guía de Colores</h2>
-            </header>
+          <div class="campo">
+            <label for="tel">Telefóno: </label>
+            <input id="tel" type="tel" placeholder="Tu Teléfono" />
+          </div>
 
-            <div class="imagen">
-              <img src="img/nosotros.jpeg" alt="imagenn blog" />
-            </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje: </label>
+            <textarea id="mensaje" cols="30" rows="10"></textarea>
+          </div>
+        </fieldset>
 
-            <div class="entrada-meta">
-              <p>Fecha: <span>15 de enero de 2022</span></p>
-              <p>Escrita por: <span>Kusi kamay</span></p>
-            </div>
+        <fieldset>
+          <legend>País</legend>
 
-            <div class="entrada-blog">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
-                in tempore assumenda ipsam repellendus amet rerum itaque tempora
-                molestias architecto ex cum dolores labore porro pariatur fugit,
-                consectetur perferendis similique.
-              </p>
-            </div>
-            <a href="entrada.html" class="btn max-width-30">Leer</a>
-          </article>
-          <!--fin de article-->
-        </div>
-        <!--fin de div-->
-        <aside>
-          <h3>Otras Entradas de Blog</h3>
+          <div class="campo">
+            <label for="pais">
+              <select name="" id="pais">
+                <option value="" selected disabled>-- Seleccione --</option>
+                <option value="PR">Perú</option>
+                <option value="MX">México</option>
+                <option value="CO">Colombia</option>
+                <option value="AR">Argentina</option>
+                <option value="ES">España</option>
+                <option value="CL">Chile</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
 
-          <ul>
-            <li><a href="entrada.html">Guía de colores</a></li>
-            <li><a href="entrada.html">Nuevos Modelos</a></li>
-            <li><a href="entrada.html">Guía para diseño de interiores</a></li>
-            <li><a href="entrada.html">Guía para diseño de exteriores</a></li>
-          </ul>
-        </aside>
-        <!--fin de aside-->
-      </section>
+        <fieldset>
+          <legend>Información Extra</legend>
+
+          <div class="campo">
+            <label for="cliente">Cliente</label>
+            <input type="radio" id="cliente" name="tipo" value="cliente" />
+          </div>
+
+          <div class="campo">
+            <label for="cliente">Provedor</label>
+            <input type="radio" id="cliente" name="tipo" value="proveedor" />
+          </div>
+
+          <div class="campo">
+            <label for="categoria">Categoria de Interés</label>
+            <input list="categorias" name="categorias" />
+            <datalist id="categorias">
+              <option value="carteles"></option>
+              <option value="mesas"></option>
+              <option value="adornos"></option>
+              <option value="dibujos"></option>
+              <option value="decoracion"></option>
+            </datalist>
+          </div>
+        </fieldset>
+
+        <input type="submit" value="Enviar Formulario" />
+      </form>
     </main>
 
     <footer class="site-footer">
