@@ -54,9 +54,6 @@ a {
   max-width: 120rem;
   margin: 0 auto;
 }
-.contenedor .enlace {
-  font-size: 1.8rem;
-}
 img {
   max-width: 100%;
   display: block;
@@ -117,11 +114,10 @@ img {
   padding: 3rem 0;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 .nav-principal a {
   color: var(--celeste-pastel);
-  font-weight: bold;
 }
 .hero {
   background-image: url(../img/principal.jpg);
