@@ -33,7 +33,12 @@ h3 {
   margin: 0 0 3rem 0;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
 }
 h2 {
   font-size: 3rem;
@@ -90,11 +95,24 @@ img {
   color: var(--celeste-pastel);
 }
 .contenedor-navegacion {
-  border-bottom: 0.1rem solid var(--gris);
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  max-width: 100%;
 }
+.header .nombre-sitio {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .contenedor-navegacion {
+    border-bottom: 0.1rem solid var(--gris);
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    max-width: 100%;
+  }
+  .header .nombre-sitio {
+    margin-top: 0;
+  }
+}
+
 .nav-principal {
   padding: 3rem 0;
   display: flex;
