@@ -54,7 +54,7 @@
 
           <div class="campo">
             <label for="tel">Telefóno: </label>
-            <input id="tel" type="tel" placeholder="Tu Teléfono" />
+            <input id="tel" id="tel" type="tel" placeholder="Tu Teléfono" />
           </div>
 
           <div class="campo">
@@ -63,7 +63,7 @@
           </div>
         </fieldset>
 
-        <fieldset>
+        <!-- <fieldset>
           <legend>País</legend>
 
           <div class="campo">
@@ -78,9 +78,9 @@
               <option value="CL">Chile</option>
             </select>
           </div>
-        </fieldset>
+        </fieldset> -->
 
-        <fieldset>
+        <!-- <fieldset>
           <legend>Información Extra</legend>
 
           <div class="campo">
@@ -104,7 +104,7 @@
               <option value="decoracion"></option>
             </datalist>
           </div>
-        </fieldset>
+        </fieldset> -->
 
         <input class="btn" type="submit" value="Enviar Formulario" />
       </form>
@@ -158,5 +158,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+        <!-- cdn emailjs -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <!-- cdn alert Js -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script type="text/javascript">
+      emailjs.init('F6Tw6q6b4ZN0jcKkN'); //aplicando api key
+    </script>
+
+    <script src="js/funcionalidades/email.js"></script>
   </body>
 </html>

@@ -7,9 +7,11 @@
   --verde-pastel: #77dd77;
   --verde-pastel-intenso: #42ab49;
   --amarillo-pastel: #fdfd96;
-  --violetaClaro: #9f7aea;
+  /* --violetaClaro: #9f7aea; */
+  --violetaClaro: #caacf9;
   --font1: 'Raleway', sans-serif;
   --font2: 'Montserrat', sans-serif;
+  --azulClaro: #7ff9c7;
 }
 
 html {
@@ -74,12 +76,12 @@ img {
   display: block;
 }
 .btn {
-  background-color: var(--blanco);
+  background-color: var(--azulClaro);
   display: block;
-  color: var(--violetaClaro);
+  color: var(--blanco);
   text-transform: uppercase;
   font-weight: 900;
-  padding: 1rem;
+  padding: 1rem 2rem;
   transition: background-color 0.3s ease-in-out;
   text-align: center;
   border: none;
