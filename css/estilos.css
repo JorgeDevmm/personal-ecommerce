@@ -7,6 +7,9 @@
   --verde-pastel: #77dd77;
   --verde-pastel-intenso: #42ab49;
   --amarillo-pastel: #fdfd96;
+  --violetaClaro: #9f7aea;
+  --font1: 'Raleway', sans-serif;
+  --font2: 'Montserrat', sans-serif;
 }
 
 html {
@@ -20,7 +23,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font2);
   font-size: 1.4rem;
   line-height: 2;
 }
@@ -29,7 +32,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font1);
   /* margin: 0 0 3rem 0; */
   margin: 0;
 }
@@ -60,6 +63,7 @@ h3 {
 a {
   text-decoration: none;
   color: var(--negro);
+  font-size: 1.8rem;
 }
 .contenedor {
   max-width: 120rem;
@@ -70,9 +74,9 @@ img {
   display: block;
 }
 .btn {
-  background-color: var(--verde-pastel);
+  background-color: var(--blanco);
   display: block;
-  color: var(--blanco);
+  color: var(--violetaClaro);
   text-transform: uppercase;
   font-weight: 900;
   padding: 1rem;
@@ -80,9 +84,10 @@ img {
   text-align: center;
   border: none;
   width: 100%;
+  border-radius: 0.5rem;
 }
 .btn:hover {
-  background-color: var(--verde-pastel-intenso);
+  background-color: var(--gris);
   cursor: pointer;
 }
 @media (min-width: 768px) {
@@ -100,7 +105,7 @@ img {
   }
 }
 .color-celeste {
-  color: var(--celeste-pastel);
+  color: var(--violetaClaro);
 }
 .margin-bottom {
   margin: 0 0 2rem 0;
@@ -111,27 +116,16 @@ img {
   text-align: center;
 }
 .nombre-sitio span {
-  color: var(--celeste-pastel);
+  color: var(--blanco);
 }
 .contenedor-navegacion {
   display: grid;
+  justify-content: center;
 }
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-bottom: 0.1rem solid var(--gris);
-}
-
-@media (min-width: 768px) {
-  .contenedor-navegacion {
-    border-bottom: 0.1rem solid var(--gris);
-    grid-template-columns: 1fr 3fr 1fr;
-    max-width: 100%;
-  }
-  .header {
-    border-bottom: 0;
-  }
+  background-color: var(--violetaClaro);
+  width: 100%;
 }
 
 .nav-principal {
@@ -148,7 +142,7 @@ img {
   }
 }
 .nav-principal a {
-  color: var(--celeste-pastel);
+  color: var(--violetaClaro);
   font-weight: bold;
 }
 .hero {
@@ -169,6 +163,7 @@ img {
 }
 .categoria {
   margin-bottom: 2rem;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .categoria {
@@ -176,23 +171,34 @@ img {
   }
 }
 .categoria img {
-  height: 25rem;
   width: 100%;
   object-fit: cover;
+
+  transition-property: transform;
+  transition-duration: 300ms;
 }
+
+.categoria img:hover {
+  transform: scale(1.2);
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
 .categorias h2 {
   text-align: center;
 }
-.categoria a {
+.listado-cat a {
   text-align: center;
   display: block; /*modificar enlace*/
   padding: 2rem;
   font-size: 2rem;
   font-weight: bold;
-  color: var(--celeste-pastel);
+  color: var(--violetaClaro);
 }
-.categoria a:hover {
-  background-color: var(--celeste-pastel);
+.listado-cat a:hover {
+  background-color: var(--violetaClaro);
   border-bottom-right-radius: 1rem;
   color: var(--blanco);
 }
@@ -201,36 +207,39 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    align-items: center;
   }
   .categoria img {
     height: 40rem;
   }
 }
+
 /** Bloque Nosotros**/
 .sobre-nosotros {
   background-image: linear-gradient(
       to bottom,
       transparent 50%,
-      var(--celeste-pastel) 50%,
-      var(--celeste-pastel) 100%
+      var(--violetaClaro) 50%,
+      var(--violetaClaro) 100%
     ),
-    url(../img/nosotros.jpeg);
+    url(../img/nosotros2.jpeg);
   background-position: center, center;
   background-repeat: no-repeat;
-  background-size: 100%, 70rem;
+  background-size: cover;
 }
 @media (min-width: 768px) {
   .sobre-nosotros {
     background-image: linear-gradient(
         to right,
         transparent 50%,
-        var(--celeste-pastel) 50%,
+        var(--violetaClaro) 50%,
         var(--celeste-pastel) 100%
       ),
-      url(../img/nosotros.jpeg);
-    background-position: center, center center;
+      url(../img/nosotros2.jpeg);
+    background-position: center center;
+
     padding: 10rem 0;
-    background-size: 100%;
+    background-size: cover;
   }
 }
 .sobre-nosotros-grid {
@@ -320,7 +329,7 @@ img {
   }
 }
 .producto {
-  background-color: var(--celeste-pastel);
+  background-color: var(--violetaClaro);
   margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
@@ -362,7 +371,7 @@ img {
 }
 .site-footer h3 {
   margin-bottom: 0.5rem;
-  color: var(--celeste-pastel);
+  color: var(--violetaClaro);
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -510,7 +519,7 @@ img {
   margin-bottom: 2rem;
 }
 .formulario legend {
-  background-color: var(--celeste-pastel);
+  background-color: var(--violetaClaro);
   color: var(--blanco);
   font-weight: 900;
   width: 100%;
