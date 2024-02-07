@@ -18,22 +18,34 @@
   <body>
     <div>
       <header class="header">
-        <h1 class="nombre-sitio">Kusi<span>kamay</span></h1>
+        <h1 class="nombre-sitio contenedor">
+          <img src="img/marca_kusi.png" />
+        </h1>
+
+        <nav class="nav-principal contenedor">
+          <a class="enlace" href="index.html">Inicio</a>
+          <a class="enlace" href="nosotros.html">Nosotros</a>
+          <!-- <a class="enlace" href="tienda.html">Tienda</a> -->
+          <!-- <a class="enlace" href="blog.html">Blog</a> -->
+          <a class="enlace" href="galeria.html">Galería</a>
+          <a class="enlace" href="contacto.html">Contacto</a>
+        </nav>
       </header>
-      <nav class="nav-principal contenedor">
-        <a class="enlace" href="index.html">Inicio</a>
-        <a class="enlace" href="nosotros.html">Nosotros</a>
-        <a class="enlace" href="tienda.html">Tienda</a>
-        <a class="enlace" href="blog.html">Blog</a>
-        <a class="enlace" href="galeria.html">Galería</a>
-        <a class="enlace" href="contacto.html">Contacto</a>
-      </nav>
     </div>
 
     <main class="contenido-principal contenedor">
       <h2 class="text-center color-celeste margin-bottom">Galería</h2>
 
-      <ul class="galeria"></ul>
+      <h3 id="mesas" class="gal-text">Mesas <span class="gal-text-contenido"></span> </h3>
+      <ul class="galeria galeria-mesas"></ul>
+      <h3 id="carteles" class="gal-text">Carteles</h3>
+      <ul class="galeria galeria-carteles"></ul>
+      <h3 id="disenos" class="gal-text">Diseños</h3>
+      <ul class="galeria galeria-disenos"></ul>
+      <h3 id="decoracion" class="gal-text">Decoración</h3>
+      <ul class="galeria galeria-decoracion"></ul>
+      <h3 id="murales" class="gal-text">Murales</h3>
+      <ul class="galeria galeria-murales"></ul>
     </main>
 
     <footer class="site-footer">
@@ -73,6 +85,12 @@
         </div>
       </div>
 
+      <div>
+        <a href="https://wa.link/rg5z4f" class="whatsapp" target="_blank">
+          <div class="whatsapp-icon"></div>
+        </a>
+      </div>
+
       <p class="copyright">
         ©️2023 Kusikamay - Todos los derechos Reservados Jorge L. Monzón
       </p>
@@ -84,6 +102,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="js/app.js"></script>
+    <script src="js/app.js" type="module"></script>
   </body>
 </html>
