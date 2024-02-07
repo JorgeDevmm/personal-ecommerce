@@ -9,7 +9,7 @@
   --amarillo-pastel: #fdfd96;
   /* --violetaClaro: #9f7aea; */
   --rosa-pastel: #ffe5ec;
-  --rosa-oscuro:#ffb3c6;
+  --rosa-oscuro: #ffb3c6;
   --font1: 'Raleway', sans-serif;
   --font2: 'Montserrat', sans-serif;
   --azul-claro: #7ff9c7;
@@ -116,7 +116,13 @@ img {
   color: var(--negro);
 }
 .margin-bottom {
-  margin: 0 0 5rem 0;
+  margin: 0 0 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .margin-bottom {
+    margin: 0 0 5rem 0;
+  }
 }
 
 /* Header y Navegación */
@@ -124,10 +130,18 @@ img {
   text-align: center;
   display: flex;
 }
+
 .nombre-sitio img {
-  height: 11rem;
+  height: 8rem;
   padding: 1rem;
 }
+@media (min-width: 768px) {
+  .nombre-sitio img {
+    height: 11rem;
+    padding: 1rem;
+  }
+}
+
 .contenedor-navegacion {
   display: grid;
   justify-content: center;
@@ -139,6 +153,7 @@ img {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 0 2rem 0 2rem;
   box-shadow: 2.5px 2.5px 5px #888888;
   position: fixed;
   z-index: 1000;
@@ -179,7 +194,7 @@ img {
 }
 
 .header__menu-burger {
-  width: 5rem;
+  width: 3rem;
   display: flex;
 }
 
@@ -195,12 +210,14 @@ img {
   background-size: cover;
   height: 25rem;
   position: relative;
-  top: 11rem;
-  margin-bottom: 11rem;
+  top: 8rem;
+  margin-bottom: 8rem;
 }
 @media (min-width: 768px) {
   .hero {
+    top: 11rem;
     height: 65rem;
+    margin-bottom: 11rem;
   }
 }
 /**Categorias**/
@@ -216,8 +233,10 @@ img {
     margin-bottom: 0;
   }
 }
+
 .categoria img {
   width: 100%;
+  height: 25rem;
   object-fit: cover;
 
   transition-property: transform;
@@ -311,9 +330,17 @@ img {
 }
 
 /**Listado de Productos**/
+
 .contenido-principal {
-  padding-top: 16rem;
+  padding-top: 10rem;
 }
+
+@media (min-width: 768px) {
+  .contenido-principal {
+    padding-top: 16rem;
+  }
+}
+
 @media (min-width: 768px) {
   .listado-productos {
     display: grid;
@@ -637,8 +664,4 @@ img {
   height: 32px;
   background: url(https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147503798/images/2eed1d1-5ae4-cc71-ff46-00e8b5cb7ae7_whatsapp.png)
     no-repeat;
-}
-
-.header__menu-burger{
-  color: var(--negro);
 }
