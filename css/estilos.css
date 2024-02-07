@@ -4,6 +4,7 @@
   --primario: #ffffec;
   --blanco: #fff;
   --celeste-pastel: #84b6f4;
+  --celeste-oscuro: #4a93ec;
   --verde-pastel: #77dd77;
   --verde-pastel-intenso: #42ab49;
   --amarillo-pastel: #fdfd96;
@@ -95,7 +96,7 @@ img {
   font-size: 1.4rem;
 }
 .btn:hover {
-  background-color: var(--gris);
+  background-color: var(--celeste-oscuro);
   cursor: pointer;
 }
 @media (min-width: 768px) {
@@ -148,13 +149,13 @@ img {
 }
 .header {
   /* position: fixed; */
-  border-bottom: 0.1rem solid var(--gris);
+  border-bottom: 0.1rem solid var(--rosa-pastel);
   background-color: var(--rosa-oscuro);
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0 2rem 0 2rem;
-  box-shadow: 2.5px 2.5px 5px #888888;
+  box-shadow: 2.5px 2.5px 2px var(--rosa-oscuro);
   position: fixed;
   z-index: 1000;
 }
