@@ -9,6 +9,7 @@
   --amarillo-pastel: #fdfd96;
   /* --violetaClaro: #9f7aea; */
   --rosa-pastel: #fdcae1;
+  --rosa-oscuro:#ffa8d9;
   --font1: 'Raleway', sans-serif;
   --font2: 'Montserrat', sans-serif;
   --azul-claro: #7ff9c7;
@@ -134,7 +135,7 @@ img {
 .header {
   /* position: fixed; */
   border-bottom: 0.1rem solid var(--gris);
-  background-color: var(--blanco);
+  background-color: var(--rosa-oscuro);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -173,7 +174,7 @@ img {
   }
 }
 .nav-principal a {
-  color: var(--celeste-pastel);
+  color: var(--negro);
   font-weight: bold;
 }
 
