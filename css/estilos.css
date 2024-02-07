@@ -8,8 +8,8 @@
   --verde-pastel-intenso: #42ab49;
   --amarillo-pastel: #fdfd96;
   /* --violetaClaro: #9f7aea; */
-  --rosa-pastel: #fdcae1;
-  --rosa-oscuro:#ffa8d9;
+  --rosa-pastel: #ffe5ec;
+  --rosa-oscuro:#ffb3c6;
   --font1: 'Raleway', sans-serif;
   --font2: 'Montserrat', sans-serif;
   --azul-claro: #7ff9c7;
@@ -116,7 +116,7 @@ img {
   color: var(--negro);
 }
 .margin-bottom {
-  margin: 0 0 2rem 0;
+  margin: 0 0 5rem 0;
 }
 
 /* Header y Navegación */
@@ -246,7 +246,7 @@ img {
 .listado-cat a:hover {
   background-color: var(--blanco);
   border-bottom-right-radius: 1rem;
-  color: var(--rosa-pastel);
+  color: var(--negro);
 }
 @media (min-width: 768px) {
   .listado-categorias {
@@ -268,7 +268,7 @@ img {
       var(--blanco) 50%,
       var(--blanco) 100%
     ),
-    url(../img/nosotros2.jpeg);
+    url(../img/nosotros2.jpg);
   background-position: center, center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -281,7 +281,7 @@ img {
         var(--celeste-pastel) 50%,
         var(--blanco) 100%
       ),
-      url(../img/nosotros2.jpeg);
+      url(../img/nosotros2.jpg);
     background-position: center center;
 
     padding: 10rem 0;
@@ -615,6 +615,7 @@ img {
   padding: 1rem;
 }
 
+/* icono whatsapp */
 .whatsapp {
   position: fixed;
   width: 60px;
@@ -636,4 +637,8 @@ img {
   height: 32px;
   background: url(https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147503798/images/2eed1d1-5ae4-cc71-ff46-00e8b5cb7ae7_whatsapp.png)
     no-repeat;
+}
+
+.header__menu-burger{
+  color: var(--negro);
 }
