@@ -612,6 +612,7 @@ img {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
+  padding: 0;
 }
 @media (min-width: 768px) {
   .galeria {
