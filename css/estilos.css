@@ -72,7 +72,15 @@ a {
 }
 p {
   color: var(--negro);
+  font-size: 1.4rem;
 }
+@media (min-width: 768px) {
+  p {
+    color: var(--negro);
+    font-size: 1.8rem;
+  }
+}
+
 .contenedor {
   max-width: 120rem;
   margin: 0 auto;
@@ -108,6 +116,12 @@ img {
 .text-center {
   text-align: center;
 }
+
+.font-w {
+  font-weight: bold;
+}
+
+
 @media (min-width: 768px) {
   .max-width-30 {
     max-width: 30rem;
@@ -157,7 +171,7 @@ img {
   padding: 0 2rem 0 2rem;
   box-shadow: 2.5px 2.5px 2px var(--rosa-oscuro);
   position: fixed;
-  z-index: 1000;
+  z-index: 3;
 }
 
 @media (min-width: 768px) {
@@ -192,6 +206,10 @@ img {
 .nav-principal a {
   color: var(--negro);
   font-weight: bold;
+}
+
+.nav-principal a:hover{
+  color: var(--blanco)
 }
 
 .header__menu-burger {
@@ -348,7 +366,6 @@ img {
 }
 
 /**Listado de Productos**/
-
 .contenido-principal {
   padding-top: 10rem;
 }
@@ -449,13 +466,6 @@ img {
   font-size: 2.8rem;
   font-weight: 900;
 }
-
-/* .producto img {
-  transition: transform 0.3s ease-out;
-}
-.producto img:hover {
-  transform: scale(0.8);
-} */
 
 /**Footer**/
 .site-footer {
@@ -578,7 +588,7 @@ img {
 }
 .imagen img {
   height: 40rem;
-  width: 100%;
+  /* width: 100%; */
   object-fit: cover;
 }
 
@@ -599,8 +609,6 @@ img {
 }
 .galeria {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
@@ -671,7 +679,7 @@ img {
   border-radius: 50px;
   text-align: center;
   font-size: 30px;
-  z-index: 100;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -683,3 +691,63 @@ img {
   background: url(https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147503798/images/2eed1d1-5ae4-cc71-ff46-00e8b5cb7ae7_whatsapp.png)
     no-repeat;
 }
+
+/* sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--rosa-oscuro);
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s linear;
+
+  /* agregar luego */
+  transform: translateX(-100%);
+}
+
+.sidebar__links {
+  text-align: center;
+  padding-left: 0;
+  font-weight: bold;
+  list-style: none;
+}
+
+.sidebar__links a {
+  font-size: 3rem;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+  color: var(--negro);
+  letter-spacing: 0.25rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar__links a:hover {
+  color: var(--blanco)
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  font-size: 3rem;
+  background: transparent;
+  border: transparent;
+  transition: all 0.3s linear;
+  color: var(--negro);
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: var(--gris);
+}
+
+.show-sidebar {
+  transform: translateX(0);
+}
+
