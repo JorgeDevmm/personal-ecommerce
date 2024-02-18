@@ -1,21 +1,18 @@
-const cargarGaleria = (nombreLista, nombreCarpeta, cantidad) => {
-  //Referencia a la lista
-  const listaGaleria = document.querySelector(`.${nombreLista}`);
+const cargarGaleria = (objGaleria) => {
+  const listaGaleria = document.querySelector(`.galeria-listado`);
 
-  for (let i = 1; i <= cantidad; i++) {
+  objGaleria.forEach((element) => {
     const liGaleria = document.createElement('li');
-    const aGaleria = document.createElement('a');
     const imgGaleria = document.createElement('img');
 
     // Verificar si existe el archivo con extensión .jpg
-    const rutaJPG = `img/${nombreCarpeta}/galeria${i}.jpg`;
-    if (fileExists(rutaJPG)) {
-      aGaleria.href = rutaJPG;
+    const rutaJPG = `${element.src}`;
+    if (fileExists( rutaJPG)) {
       imgGaleria.src = rutaJPG;
     } else {
       // Si no existe, asumir que existe con la extensión .jpeg
-      aGaleria.href = `img/${nombreCarpeta}/galeria${i}.jpeg`;
-      imgGaleria.src = `img/${nombreCarpeta}/galeria${i}.jpeg`;
+
+      imgGaleria.src = `${element.src}`;
     }
 
     // Establecer el atributo 'loading' en 'lazy'
@@ -23,7 +20,7 @@ const cargarGaleria = (nombreLista, nombreCarpeta, cantidad) => {
 
     liGaleria.append(imgGaleria);
     listaGaleria.append(liGaleria);
-  }
+  });
 
   // Función para verificar si un archivo existe
   function fileExists(url) {
