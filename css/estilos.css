@@ -124,7 +124,10 @@ img {
 /* li galeria */
 .flex{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+
 }
 
 @media (min-width: 768px) {
