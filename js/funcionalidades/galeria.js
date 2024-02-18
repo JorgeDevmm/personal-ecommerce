@@ -18,7 +18,7 @@ const cargarGaleria = async (objGaleria) => {
       imgGaleria.src = `${element.src}`;
     }
 
-    liGaleria.classList.add('flex');
+
 
     // Establecer el atributo 'loading' en 'lazy'
     imgGaleria.setAttribute('loading', 'lazy');
@@ -27,11 +27,16 @@ const cargarGaleria = async (objGaleria) => {
     const spinnerElement = spinner();
     liGaleria.appendChild(spinnerElement);
 
+
+  //  estilo de galeria_li
+    liGaleria.classList.add('galeria__li');
+
     // Escuchar el evento load de la imagen
     imgGaleria.addEventListener('load', () => {
       // Cuando la imagen carga, eliminar el spinner
       liGaleria.removeChild(spinnerElement);
     });
+
 
     liGaleria.append(imgGaleria);
     listaGaleria.append(liGaleria);
