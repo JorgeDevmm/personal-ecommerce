@@ -121,6 +121,12 @@ img {
   font-weight: bold;
 }
 
+/* li galeria */
+.flex{
+  display: flex;
+  justify-content: center;
+}
+
 @media (min-width: 768px) {
   .max-width-30 {
     max-width: 30rem;
@@ -630,6 +636,8 @@ img {
   object-fit: cover;
 }
 
+
+
 /**Formulario**/
 .formulario {
   max-width: 60rem;
@@ -782,3 +790,4 @@ img {
     transform: rotate(0.5turn);
   }
 }
+

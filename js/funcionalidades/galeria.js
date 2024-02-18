@@ -9,6 +9,7 @@ const cargarGaleria = async (objGaleria) => {
 
     // Verificar si existe el archivo con extensión .jpg
     const rutaJPG = `${element.src}`;
+    // bloque solicitud asincrona de la funciónfileExistesAsync y hasta que se cumpla continuara con la otra (sincrona)
     const exists = await fileExistsAsync(rutaJPG);
     if (exists) {
       imgGaleria.src = rutaJPG;
@@ -16,6 +17,8 @@ const cargarGaleria = async (objGaleria) => {
       // Si no existe, asumir que existe con la extensión .jpeg
       imgGaleria.src = `${element.src}`;
     }
+
+    liGaleria.classList.add('flex');
 
     // Establecer el atributo 'loading' en 'lazy'
     imgGaleria.setAttribute('loading', 'lazy');
@@ -37,6 +40,7 @@ const cargarGaleria = async (objGaleria) => {
   // Función para verificar si un archivo existe
   async function fileExistsAsync(url) {
     try {
+      // valir obtiene la url con fetch mediante el method "HEAD" que devuelve información y no el cuerpo
       const response = await fetch(url, { method: 'HEAD' });
       return response.ok;
     } catch (error) {
